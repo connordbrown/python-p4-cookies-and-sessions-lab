@@ -7,7 +7,7 @@ class TestApp:
     '''Flask API in app.py'''
 
     def test_show_articles_route(self):
-        '''shows an article "/article/<id>".'''
+        '''shows an article "/articles/<id>".'''
         with app.app_context():
             response = app.test_client().get('/articles/1')
             response_json = response.get_json()
